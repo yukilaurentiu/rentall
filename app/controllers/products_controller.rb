@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   end
 
   def new
-    #TODO
+    @product = Product.new
   end
 
   def create
