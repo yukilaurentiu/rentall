@@ -24,6 +24,9 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    #TODO
+    @product = Product.find(params[:id])
+    if @product.destroy
+      redirect_to products_path, status: :see_other, notice: "You successfully deleted the product: #{@product.title}"
+    end
   end
 end
