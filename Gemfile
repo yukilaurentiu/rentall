@@ -5,6 +5,7 @@ ruby "3.1.2"
 
 # Added gems
 gem "devise"
+gem "cloudinary"
 
 # faker bundle
 
