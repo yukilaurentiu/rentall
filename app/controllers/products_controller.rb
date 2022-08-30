@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    #TODO
+    @product = Product.find(params[:id])
   end
 
   def new
