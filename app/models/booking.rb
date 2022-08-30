@@ -6,7 +6,6 @@ class Booking < ApplicationRecord
 
   validates :start_date, presence: true
   validates :end_date, presence: true
-  validates :total_price, presence: true, numericality: { only_float: true }
   validates :user_id, uniqueness: { scope: :product_id }
 
   private
