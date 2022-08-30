@@ -2,7 +2,6 @@
 <h1> Description: <%= @product.description %> </h1>
 <h1> Category: <%= @product.category %> </h1>
 <h1> Price: <%= @product.price %> Euros </h1>
-
+<%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 <%= link_to "Rent me!", new_product_path %>
-
 <%= link_to "Back to Products", products_path %>
