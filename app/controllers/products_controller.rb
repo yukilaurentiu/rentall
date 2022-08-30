@@ -12,7 +12,12 @@ class ProductsController < ApplicationController
   end
 
   def create
-    #TODO
+    @product = Product.new(product_params)
+    if @product.save
+      redirect_to product_path(@product)
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -29,4 +34,11 @@ class ProductsController < ApplicationController
       redirect_to products_path, status: :see_other, notice: "You successfully deleted the product: #{@product.title}"
     end
   end
+
+  private
+
+  def product_params
+    params.require(:product).permit(:title, :description, :category, :price)
+  end
+
 end
