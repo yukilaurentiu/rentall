@@ -1,8 +1,14 @@
 
 <div class="container">
-  <h2>Find and</h2>
-  <h2>rent in</h2>
-  <h2>your area</h2>
+  <div class="title">
+    <h2>Find and</h2>
+    <h2 id="title-line">rent in</h2>
+    <h2>your area</h2>
+  </div>
   <%= render "shared/search" %>
-  <h3>Categories here</h3>
+  <h3 class="subtitle">Categories here</h3>
+  <%# Here do card grid %>
+  <%= render "shared/card" %>
+  <%= render "shared/card" %>
+
 </div>
