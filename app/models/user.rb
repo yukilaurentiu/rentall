@@ -11,4 +11,8 @@ class User < ApplicationRecord
   validates :address, presence: true
   validates :phone_number, presence: true
   # username is optional
+
+  has_many :bookings
+  has_many :products, through: :bookings
+
 end
