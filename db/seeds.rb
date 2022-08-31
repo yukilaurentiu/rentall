@@ -11,6 +11,8 @@ puts "Cleaning database"
 Product.destroy_all
 
 50.times do
+  require "open-uri"
+  file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
   Product.create(
     title: Faker::Commerce.product_name + " " + Faker::Commerce.product_name,
     description: Faker::Commerce.material + " " + Faker::Commerce.material,
@@ -19,5 +21,4 @@ Product.destroy_all
     address: Faker::Address.full_address
   )
 
-puts "#{Product.last.title} was created"
 end
