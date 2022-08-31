@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center" >
+  <h1>Request to book!</h1>
+    <%= simple_form_for [@product, @booking] do |f| %>
+      <%= f.input :comment, label: "Comment: " %>
+      <%= f.input :start_date, as: :date %>
+      <%= f.input :end_date, as: :date %>
+      <%= f.association :product %>
+      <%= f.submit "Set booking!", class: "btn btn-success" %>
+    <% end %>
+
+    <%= link_to "Back", products_path %>
+  </div>
+</div>
