@@ -1,4 +1,6 @@
-<%= simple_form_for :search, url: root_path, class:"example", method: :get do |f| %>
-  <input type="text" placeholder="Find products in your area..." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
-<% end %>
+<div class="search">
+  <%= simple_form_for :search, url: root_path, class:"example", method: :get do |f| %>
+    <input type="text" placeholder="Find products in your area..." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  <% end %>
+</div>
