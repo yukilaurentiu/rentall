@@ -24,7 +24,9 @@
   margin-top: 20px;
 }
 
-.card-grid {  display: grid;
+.card-grid {
+  max-width: 100vw;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1.5fr 1fr 1fr;
   gap: 4px 4px;

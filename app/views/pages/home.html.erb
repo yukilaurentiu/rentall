@@ -8,7 +8,7 @@
   <%= render "shared/search" %>
   <h3 class="subtitle">Products here</h3>
   <div class="card-grid">
-    <%= @products.each do |product| %>
+    <%= @products.first(12).each do |product| %>
     <%= render(partial: "shared/card", locals: { product: product }) %>
     <% end %>
   </div>
