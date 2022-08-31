@@ -1,13 +1,21 @@
-<p style="color: green"><%= notice %></p>
-<h1> Product: <%= @product.title %> </h1>
-<h1> Description: <%= @product.description %> </h1>
-<h1> Category: <%= @product.category %> </h1>
-<h1> Price: <%= @product.price %> Euros </h1>
+<div class="container">
+  <div class="d-flex">
+    <div>
+      <img class="img-fluid" src="<%= image_path("test_img.jpg")%>" width="300px" height="200px" alt=" <%= @product.title %>">
+    </div>
+    <div>
+      <p style="color: green"><%= notice %></p>
+      <h1> Product: <%= @product.title %> </h1>
+      <h1> Description: <%= @product.description %> </h1>
+      <h1> Category: <%= @product.category %> </h1>
+      <h3> <%= @product.price %> <i class="fa-solid fa-euro-sign"></i> </h1>
 
-<h1> Adress: <%= @product.address %> </h1>
+      <h3> <%= @product.address %> <i class="fa-solid fa-location-dot"></i></h1>
+    </div>
+  </div>
 
+    <%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
 
-<%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-
-<%= link_to "Rent me!", new_product_path %>
-<%= link_to "Back to Products", products_path %>
+    <%= link_to "Rent me!", new_product_path %>
+    <%= link_to "Back to Products", products_path %>
+</div>

@@ -6,10 +6,15 @@
     <h2>your area</h2>
   </div>
   <%= render "shared/search" %>
-  <h3 class="subtitle">Products here</h3>
+  <h3 class="subtitle">Recomended products</h3>
   <div class="card-grid">
-    <%= @products.first(12).each do |product| %>
+    <%= @products.first(8).each do |product| %>
     <%= render(partial: "shared/card", locals: { product: product }) %>
     <% end %>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="btn-orange">
+      <%= link_to "Show all products", products_path %>
+    </div>
   </div>
 </div>
