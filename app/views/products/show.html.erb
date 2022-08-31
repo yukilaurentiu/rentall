@@ -6,8 +6,7 @@
 
 <h1> Adress: <%= @product.address %> </h1>
 
-
+<%= link_to "Update product", edit_product_path(@product) %>
 <%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-
 <%= link_to "Rent me!", new_product_path %>
 <%= link_to "Back to Products", products_path %>
