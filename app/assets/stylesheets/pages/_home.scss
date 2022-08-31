@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+.title h2 {
+  font-family: sans-serif;
+  font-size: 64px;
+  font-weight: bolder;
+  color: #F5924D;
+}
+
+.container {
+  margin-top: 30px;
+}
+
+#title-line {
+  color: white;
+  text-shadow: 1px 2px #E7E7E7;
+}
+
+.subtitle {
+  font-family: sans-serif;
+  font-size: 48px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 1px 2px #E7E7E7;
+  margin-top: 20px;
+}
