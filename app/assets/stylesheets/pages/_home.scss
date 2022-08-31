@@ -23,3 +23,14 @@
   text-shadow: 1px 2px #E7E7E7;
   margin-top: 20px;
 }
+
+.card-grid {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 1fr;
+  gap: 4px 4px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+}
