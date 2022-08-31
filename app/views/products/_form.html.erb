@@ -1,6 +1,5 @@
-<%= simple_form_for(@product) do |f| %>
+<%= simple_form_for @product do |f| %>
   <div class="container">
-    <div class="row justify-content-center" >
       <%= f.input :title %>
       <%= f.input :description %>
       <%= f.input :category %>
@@ -10,6 +9,5 @@
       <%= link_to "Back to Products", products_path %>
       <br>
       <%= link_to "Back to Main Page", "/" %>
-    </div>
   </div>
 <% end %>
