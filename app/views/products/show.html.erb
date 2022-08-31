@@ -3,7 +3,7 @@
 <h1> Category: <%= @product.category %> </h1>
 <h1> Price: <%= @product.price %> Euros </h1>
 
-<h1> Adress: <%= @product.address %> </h1>
+
 
 
 <%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
