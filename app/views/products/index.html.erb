@@ -1,7 +1,7 @@
+
 <p style="color: green"><%= notice %></p>
-<% @products.each do |product| %>
-    <%= product.title %>
-    <p>
-      <%= link_to "Show Product", product %>
-    <p>
-<% end %>
+<div class="container mx-auto">
+  <% @products.each do |product| %>
+      <%= render(partial: "shared/smallcard", locals: { product: product }) %>
+  <% end %>
+</div>
