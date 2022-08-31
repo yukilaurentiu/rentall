@@ -36,7 +36,7 @@ GEM
       rails-dom-testing (~> 2.0)
     actionpack (7.0.3.1)
       actionview (= 7.0.3.1)
-      activesupport (= 7.0.3.1)>>>>>>> master
+      activesupport (= 7.0.3.1)
       rack (~> 2.0, >= 2.2.0)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
@@ -169,8 +169,6 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-linux)
-      racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.3)
     public_suffix (5.0.0)
@@ -276,8 +274,6 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
-  x86_64-linux
-
 
 DEPENDENCIES
   autoprefixer-rails
