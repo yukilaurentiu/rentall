@@ -36,7 +36,7 @@ GEM
       rails-dom-testing (~> 2.0)
     actionpack (7.0.3.1)
       actionview (= 7.0.3.1)
-      activesupport (= 7.0.3.1)>>>>>>> master
+      activesupport (= 7.0.3.1)
       rack (~> 2.0, >= 2.2.0)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
@@ -120,7 +120,7 @@ GEM
     faker (2.22.0)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
-    font-awesome-sass (6.1.2)
+    font-awesome-sass (6.2.0)
       sassc (~> 2.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
@@ -167,8 +167,6 @@ GEM
       timeout
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.8-arm64-darwin)
-      racc (~> 1.4)
     nokogiri (1.13.8-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -275,9 +273,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  arm64-darwin-21
   x86_64-linux
-
 
 DEPENDENCIES
   autoprefixer-rails
