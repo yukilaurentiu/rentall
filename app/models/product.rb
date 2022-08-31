@@ -8,6 +8,7 @@ class Product < ApplicationRecord
      {minimum: 10, maximum: 4000, too_long: "%{count} characters is the maximum allowed" }
   validates :category, presence: true
   validates :price, presence: true, numericality: { only_float: true }
+  validates :address, presence: true
 
   has_many :bookings
 
