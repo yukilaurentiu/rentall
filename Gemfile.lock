@@ -167,11 +167,7 @@ GEM
       timeout
     netrc (0.11.0)
     nio4r (2.5.8)
-<<<<<<< HEAD
-    nokogiri (1.13.8-x86_64-linux)
-=======
     nokogiri (1.13.8-arm64-darwin)
->>>>>>> 1a262839d15d83ec1d8fa977384b60b154ae1f63
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.4.3)
@@ -277,9 +273,7 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  x86_64-linux
   arm64-darwin-21
-
 
 DEPENDENCIES
   autoprefixer-rails

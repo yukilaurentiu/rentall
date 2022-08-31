@@ -8,12 +8,8 @@
   <%= render "shared/search" %>
   <h3 class="subtitle">Products here</h3>
   <div class="card-grid">
-    <%= render "shared/card" %>
-    <%= render "shared/card" %>
-    <%= render "shared/card" %>
-    <%= render "shared/card" %>
-    <%= render "shared/card" %>
-    <%= render "shared/card" %>
-    <%= render "shared/card" %>
+    <%= @products.each do |product| %>
+    <%= render(partial: "shared/card", locals: { product: product }) %>
+    <% end %>
   </div>
 </div>
