@@ -1,0 +1,62 @@
+
+/* Style the search field */
+.simple_form input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Style the submit button */
+.simple_form button {
+  border-radius: 10px;
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #F5924D;
+  color: white;
+  font-size: 17px;
+  border: 1px solid rgb(212, 212, 212);
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+// This code is an old style that Antonio would like to implement if he has time ----------
+// .example .form-control {
+//   height: 3.5rem;
+//   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+//   border: 1px solid #E7E7E7;
+//   border-radius: 10px;
+// }
+
+// .example .example:focus {
+//   border: 1px solid #F5924D;
+//   outline: none !important;
+//   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+//   border-radius: 30px;
+// }
+
+// .iform-outline {
+//   width: 100%;
+// }
+
+// * {
+//   box-sizing: border-box;
+// }
