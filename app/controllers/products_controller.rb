@@ -25,8 +25,9 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @product.update(product_params)
-    redirect_to product_path(@product), status: :see_other, notice: "You successfully updated the product: #{@product.title}"
+    if @product.update(product_params)
+      redirect_to product_path(@product), status: :see_other, notice: "You successfully updated the product: #{@product.title}"
+    end
   end
 
   def destroy
