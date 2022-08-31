@@ -16,7 +16,7 @@ Product.destroy_all
     description: Faker::Commerce.material + " " + Faker::Commerce.material,
     category: Faker::Commerce.department(max: 5),
     price: Faker::Commerce.price,
-    address: Faker::Address.full_address,
+    address: Faker::Address.full_address
   )
 
 puts "#{Product.last.title} was created"
