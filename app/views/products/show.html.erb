@@ -1,21 +1,38 @@
+
 <div class="container">
   <div class="d-flex">
     <div>
       <img class="img-fluid" src="<%= image_path("test_img.jpg")%>" width="300px" height="200px" alt=" <%= @product.title %>">
     </div>
     <div>
-      <p style="color: green"><%= notice %></p>
-      <h1> Product: <%= @product.title %> </h1>
-      <h1> Description: <%= @product.description %> </h1>
-      <h1> Category: <%= @product.category %> </h1>
-      <h3> <%= @product.price %> <i class="fa-solid fa-euro-sign"></i> </h1>
-      <h3> <%= @product.address %> <i class="fa-solid fa-location-dot"></i></h1>
+      <div>
+        <p style="color: green"><%= notice %></p>
+        <h1> <%= @product.title %> </h1>
+        <h3> Category: <%= @product.category %> </h3>
+        <h3> <%= @product.price %> <i class="fa-solid fa-euro-sign"></i> </h1>
+        <h1><i class="fa-solid fa-location-dot"></i><h3> <%= @product.address %></h3></h1>
+        <p> Description: <%= @product.description %> </p>
+
+      </div>
+      <div class="container">
+        <div class="row justify-content-center" >
+          <div class="request-form">
+            <h1>Request to book !</h1>
+            <%= simple_form_for [@product, @booking] do |f| %>
+              <%= f.input :start_date, as: :date %>
+              <%= f.input :end_date, as: :date %>
+              <%= f.input :comment, label: "Comment: " %>
+              <%= f.submit "Set booking!", class: "btn-orange" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-
-  <%= link_to "Update product", edit_product_path(@product) %>
-  <%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <%= link_to "Create Product", new_product_path %>
-  <%= link_to "Back to Products", products_path %>
 </div>
+
+
+<%= link_to "Update product", edit_product_path(@product) %>
+<%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Create Product", new_product_path %>
+<%= link_to "Back to Products", products_path %>
