@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
 
+  has_one_attached :photo
+
   validates :title, presence: true, length:
     #the user should enter a title that is min. 10 characters and max. 50 characters long
     { minimum: 10, maximum: 50, too_long: "%{count} characters is the maximum allowed" }

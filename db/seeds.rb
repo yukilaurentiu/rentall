@@ -10,15 +10,21 @@ require "faker"
 puts "Cleaning database"
 Product.destroy_all
 
+require "open-uri"
+
 50.times do
-  require "open-uri"
-  file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg")
-  Product.create(
+  product = Product.new(
     title: Faker::Commerce.product_name + " " + Faker::Commerce.product_name,
     description: Faker::Commerce.material + " " + Faker::Commerce.material,
     category: Faker::Commerce.department(max: 5),
     price: Faker::Commerce.price,
     address: Faker::Address.full_address
   )
-
+  file = URI.open('https://source.unsplash.com/random/800x800/?img=1')
+  product.photo.attach(io: file, filename: 'random.png', content_type: 'image/png')
+  product.save
 end
+
+#https://thispersondoesnotexist.com/image
+# https://source.unsplash.com/random/800x800/?img=1
+# https://loremflickr.com/320/240/dog
