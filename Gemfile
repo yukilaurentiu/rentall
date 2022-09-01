@@ -3,12 +3,16 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# search
+gem "pg_search"
+
 # Added gems
 gem "devise"
 gem "cloudinary"
 
-# faker bundle
+gem "dotenv-rails", groups: [:development, :test]
 
+# faker bundle
 gem "faker"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
