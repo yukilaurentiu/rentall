@@ -12,7 +12,8 @@ Product.destroy_all
 
 require "open-uri"
 
-20.times do
+15.times do
+
   product = Product.new(
     title: Faker::Commerce.product_name + " " + Faker::Commerce.product_name,
     description: Faker::Commerce.material + " " + Faker::Commerce.material,

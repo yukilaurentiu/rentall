@@ -9,6 +9,7 @@ gem "pg_search"
 # Added gems
 gem "devise"
 gem "cloudinary"
+gem "geocoder"
 
 gem "dotenv-rails", groups: [:development, :test]
 
