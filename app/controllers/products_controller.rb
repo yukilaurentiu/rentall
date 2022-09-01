@@ -9,6 +9,12 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+    @markers = @products.geocoded.map do |product|
+      {
+        lat: product.latitude,
+        lng: product.longitude
+      }
+    end
   end
 
   def show
