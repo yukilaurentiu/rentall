@@ -20,7 +20,7 @@ require "open-uri"
     price: Faker::Commerce.price,
     address: Faker::Address.full_address
   )
-  file = URI.open('https://source.unsplash.com/random/800x800/?#{product.description}')
+  file = URI.open("https://source.unsplash.com/random/800x800/?#{product.description}")
   product.photo.attach(io: file, filename: 'random.png', content_type: 'image/png')
   product.save
 end
