@@ -24,7 +24,3 @@ require "open-uri"
   product.photo.attach(io: file, filename: 'random.png', content_type: 'image/png')
   product.save
 end
-
-#https://thispersondoesnotexist.com/image
-# https://source.unsplash.com/random/800x800/?img=1
-# https://loremflickr.com/320/240/dog
