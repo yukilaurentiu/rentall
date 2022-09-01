@@ -277,6 +277,7 @@ GEM
 
 PLATFORMS
   x86_64-linux
+  arm64-darwin-21
 
 DEPENDENCIES
   autoprefixer-rails

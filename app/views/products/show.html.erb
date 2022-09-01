@@ -13,7 +13,6 @@
     </div>
   </div>
 
-  <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
 
   <%= link_to "Update product", edit_product_path(@product) %>
   <%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
