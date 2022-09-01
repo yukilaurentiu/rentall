@@ -1,0 +1,10 @@
+<div class="card-product">
+  <img src="http://loremflickr.com/280/280/<%= product.title %>" />
+  <div class="card-product-infos" class="d-flex justify-content-between">
+    <h2> <%= product.title %> </h2>
+    <p> <%= product.description %> </p>
+    <div class="btn-orange">
+      <%= link_to "Show Product", product %>
+    </div>
+  </div>
+</div>
