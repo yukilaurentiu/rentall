@@ -1,14 +1,16 @@
 <%= simple_form_for @product do |f| %>
-  <div class="container form-style">
+  <div class="container form-inputs">
       <%= f.input :title %>
       <%= f.input :description %>
       <%= f.input :category %>
       <%= f.input :address %>
       <%= f.input :price %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
       <%= f.submit "Save", class: "btn btn-success"%>
-      <br>
+      <hr>
+      <div>
       <%= link_to "Back to Products", products_path %>
-      <br>
-      <%= link_to "Back to Main Page", "/" %>
+      <%= link_to "Back to Homepage", "/" %>
+      </div>
   </div>
 <% end %>
