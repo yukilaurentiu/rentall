@@ -12,7 +12,8 @@ Product.destroy_all
 
 require "open-uri"
 
-5.times do
+15.times do
+
   product = Product.new(
     title: Faker::Commerce.product_name + " " + Faker::Commerce.product_name,
     description: Faker::Commerce.material + " " + Faker::Commerce.material,
@@ -20,7 +21,7 @@ require "open-uri"
     price: Faker::Commerce.price,
     address: Faker::Address.full_address
   )
-  file = URI.open('https://source.unsplash.com/random/800x800/?img=1')
+  file = URI.open("https://source.unsplash.com/random/800x800/?#{product.description}")
   product.photo.attach(io: file, filename: 'random.png', content_type: 'image/png')
   product.save
 end
