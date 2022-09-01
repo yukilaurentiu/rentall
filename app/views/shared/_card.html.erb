@@ -11,13 +11,15 @@
     </div> %>
   </div>
   <div class="card-body">
-    <h4 class="card-title"> <%= @product.title %> </h4>
-    <h5 class="card-subtitle"> <%= @product.category %> </h5>
-    <p class="card-text"> <%= @product.description %>< /p>
-    <div class="card-bottom">
-    <%# ------------This is a button ----------- %>
-      <a href="#" class="btn-orange">Book product</a>
-      <h3> <%= @product.price %> €</h3>
-    </div>
+    <h4 class="card-title"> <%= product.title %> </h4>
+    <h5 class="card-subtitle"> <%= product.category %> </h5>
+    <p class="card-text"> <%= product.description %></p>
+      <div class="d-flex justify-content-between align-items-center" >
+        <div class="btn-orange">
+          <%= link_to "Book product", product %>
+        </div>
+        <h3> <%= product.price %> €</h3>
+      </div>
   </div>
+
 </div>

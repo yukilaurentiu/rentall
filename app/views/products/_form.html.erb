@@ -1,15 +1,14 @@
-<%= simple_form_for(@product) do |f| %>
-  <div class="container">
-    <div class="row justify-content-center" >
+<%= simple_form_for @product do |f| %>
+  <div class="container form-style">
       <%= f.input :title %>
       <%= f.input :description %>
       <%= f.input :category %>
+      <%= f.input :address %>
       <%= f.input :price %>
       <%= f.submit "Save", class: "btn btn-success"%>
       <br>
       <%= link_to "Back to Products", products_path %>
       <br>
       <%= link_to "Back to Main Page", "/" %>
-    </div>
   </div>
 <% end %>
