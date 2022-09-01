@@ -1,7 +1,10 @@
+<%= link_to "Home", root_path %>
+
 <p style="color: green"><%= notice %></p>
 <% @products.each do |product| %>
     <%= product.title %>
     <p>
       <%= link_to "Show Product", product %>
+      <%= link_to "Home", root_path %>
     <p>
 <% end %>
