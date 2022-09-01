@@ -13,8 +13,8 @@
     <h5 class="card-subtitle"> <%= product.category %> </h5>
     <p class="card-text"> <%= product.description %></p>
       <div class="d-flex justify-content-between align-items-center" >
-        <div class="btn-orange">
-          <%= link_to "Book product", product %>
+        <div>
+          <%= link_to "Book", product, {:class => "btn-orange"} %>
         </div>
         <h3> <%= product.price %> €</h3>
       </div>

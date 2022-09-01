@@ -1,0 +1,35 @@
+.btn-orange {
+  color: white;
+  padding: 8px 24px;
+  border: 1px solid #F5924D;
+  border-radius: 8px;
+  background: #F5924D;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 70ms ease-in-out;
+
+  &:hover {
+    background-color: #fd8f3b;
+    border: 1px solid #fd8f3b;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.btn-orange-outline {
+  color: #F5924D;
+  padding: 8px 24px;
+  border: 1px solid #F5924D;
+  border-radius: 8px;
+  background: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid #fd8f3b;
+    color: #fd8f3b;
+    text-decoration: none;
+  }
+}
