@@ -6,10 +6,10 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, presence: true, length: { minimum: 8 }
-  validates :first_name, presence: true, length: { minimum: 2 }
-  validates :last_name, presence: true, length: { minimum: 2 }
-  validates :address, presence: true
-  validates :phone_number, presence: true
+  # validates :first_name, presence: true, length: { minimum: 2 }
+  # validates :last_name, presence: true, length: { minimum: 2 }
+  # validates :address, presence: true
+  # validates :phone_number, presence: true
   # username is optional
 
   has_many :bookings

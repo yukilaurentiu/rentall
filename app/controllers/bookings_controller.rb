@@ -8,6 +8,7 @@ class BookingsController < ApplicationController
     @product = Product.find(params[:product_id])
     @booking = Booking.new(booking_params)
     @booking.product = @product
+    @booking.user = current_user
     if @booking.save
       redirect_to product_path(@product), status: :see_other, notice: "You successfully booked the product: #{@product.title}"
     else
