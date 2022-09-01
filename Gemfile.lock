@@ -122,6 +122,7 @@ GEM
     ffi (1.15.5)
     font-awesome-sass (6.2.0)
       sassc (~> 2.0)
+    geocoder (1.8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     http-accept (1.7.0)
@@ -167,13 +168,13 @@ GEM
       timeout
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.8-x86_64-linux)
     nokogiri (1.13.8-arm64-darwin)
 <<<<<<< HEAD
 
 =======
 >>>>>>> 9474fefcbc06c5a5100ca53623ba76c7535d844c
       racc (~> 1.4)
+    nokogiri (1.13.8-x86_64-linux)
     orm_adapter (0.5.0)
     pg (1.4.3)
     pg_search (2.3.6)
@@ -281,15 +282,9 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-<<<<<<< HEAD
-<<<<<<< HEAD
-  x86_64-linux
-=======
-=======
-  x86_64-linux
->>>>>>> 0d06dea5049dcb0659ba8795aa2d01902f19b6e8
   arm64-darwin-21
->>>>>>> 9474fefcbc06c5a5100ca53623ba76c7535d844c
+  x86_64-linux
+
 
 DEPENDENCIES
   autoprefixer-rails
@@ -301,6 +296,7 @@ DEPENDENCIES
   dotenv-rails
   faker
   font-awesome-sass (~> 6.1)
+  geocoder
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
