@@ -9,20 +9,14 @@
       <h1> Description: <%= @product.description %> </h1>
       <h1> Category: <%= @product.category %> </h1>
       <h3> <%= @product.price %> <i class="fa-solid fa-euro-sign"></i> </h1>
-
       <h3> <%= @product.address %> <i class="fa-solid fa-location-dot"></i></h1>
     </div>
   </div>
 
+  <%= cl_image_tag @product.photo.key, height: 300, width: 400, crop: :fill %>
 
-<%= link_to "Update product", edit_product_path(@product) %>
-<%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-<%= link_to "Rent me!", new_product_path %>
-<%= link_to "Back to Products", products_path %>
-
-    <%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-
-    <%= link_to "Rent me!", new_product_path %>
-    <%= link_to "Back to Products", products_path %>
+  <%= link_to "Update product", edit_product_path(@product) %>
+  <%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <%= link_to "Create Product", new_product_path %>
+  <%= link_to "Back to Products", products_path %>
 </div>
-

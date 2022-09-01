@@ -3,6 +3,12 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    sql_query = "title ILIKE @@ :query OR description ILIKE @@ :query"
+    if params[:query].present?
+      @products = Product.where("title ILIKE ?", "%#{params[:query]}%")
+    else
+      @products = Product.all
+    end
   end
 
   def show
@@ -38,11 +44,10 @@ class ProductsController < ApplicationController
 
   private
 
+  def product_params
+    params.require(:product).permit(:title, :description, :category, :price, :photo, :address)
+  end
   def set_product
     @product = Product.find(params[:id])
-  end
-
-  def product_params
-    params.require(:product).permit(:title, :description, :category, :price, :address)
   end
 end
