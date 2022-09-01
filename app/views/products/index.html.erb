@@ -1,7 +1,17 @@
+<%= link_to "Home", root_path %>
+
+<%= form_with url: products_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a product"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
 <p style="color: green"><%= notice %></p>
 <div class="container mx-auto">
   <% @products.each do |product| %>
       <%= render(partial: "shared/smallcard", locals: { product: product }) %>
   <% end %>
 </div>
-
