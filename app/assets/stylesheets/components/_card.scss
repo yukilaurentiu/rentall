@@ -50,7 +50,7 @@
   border-radius: 10px;
   transition: width 1s, height 1s;
   &:hover {
-    opacity: 0.9;
+    opacity: 0.7; // added some opacity
     padding: 12px 17px;
   }
 }
@@ -59,6 +59,13 @@
   position: relative;
 }
 
+#card-footer {
+  position: absolute;
+  bottom: 20px;
+  & h3 {
+    margin-left: 25px;
+  }
+}
 
 // STYLE FOR THE BOOKMARK
 // .bookmark {

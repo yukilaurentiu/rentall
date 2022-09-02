@@ -41,6 +41,8 @@ form-style {
   background-color: red;
 }
 
+
+
 // This code is an old style that Antonio would like to implement if he has time ----------
 // .example .form-control {
 //   height: 3.5rem;
@@ -63,4 +65,27 @@ form-style {
 // * {
 //   box-sizing: border-box;
 // }
+}
+
+.search {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0E0000;
+  background-color: #F4F4F4;
+  background-clip: padding-box;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  transition: border-color 0.15s
+}
+
+.form-control {
+  border-radius: 10px;
+  margin-right: 10px;
 }
