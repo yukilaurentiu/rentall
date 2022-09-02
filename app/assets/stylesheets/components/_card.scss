@@ -4,20 +4,7 @@
   border-radius: 5px;
   width: 300px;
   height: 480px;
-  transition: 0.3s;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  &:hover {
-    opacity: 0.9;
-  }
-}
-
-.btn {
-  border-radius: 10px;
-  justify-content: center;
-  opacity: 0.8;
-  &:hover {
-    opacity: 1;
-  }
 }
 
 .card-tile {
@@ -29,6 +16,11 @@
   background-size: contain;
   object-fit: cover;
   height: 25vh;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 // .card-bottom {
@@ -36,29 +28,17 @@
 //   justify-content: space-between;
 // }
 
-.btn-orange {
-  font-style: none;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: large;
-  color: white;
-  padding: 10px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #F5924D;
-  border-radius: 10px;
-  transition: width 1s, height 1s;
-  &:hover {
-    opacity: 0.9;
-    padding: 12px 17px;
-  }
-}
-
 .card-img {
   position: relative;
 }
 
+#card-footer {
+  position: absolute;
+  bottom: 20px;
+  & h3 {
+    margin-left: 25px;
+  }
+}
 
 // STYLE FOR THE BOOKMARK
 // .bookmark {

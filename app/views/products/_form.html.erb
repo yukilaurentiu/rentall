@@ -6,11 +6,11 @@
       <%= f.input :address %>
       <%= f.input :price %>
       <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-      <%= f.submit "Save", class: "btn btn-success"%>
+      <%= f.submit "Save", class: "btn-orange mb-2"%>
       <hr>
-      <div>
-      <%= link_to "Back to Products", products_path %>
-      <%= link_to "Back to Homepage", "/" %>
+      <div class="d-flex justify-content-end">
+      <%= link_to "Back to Products", products_path, class: "btn-grey" %>
+      <%= link_to "Back to Homepage", "/", class: "btn-grey-outline ms-2" %>
       </div>
   </div>
 <% end %>

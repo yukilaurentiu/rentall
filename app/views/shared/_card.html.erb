@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="max-height: 28rem;">
   <div class="card-img">
     <div>
       <img class="card-img-top" src="<%= image_path("test_img.jpg") %>" alt="Card image cap">
@@ -11,13 +11,14 @@
   <div class="card-body">
     <h4 class="card-title"> <%= product.title %> </h4>
     <h5 class="card-subtitle"> <%= product.category %> </h5>
-    <p class="card-text"> <%= product.description %></p>
+    <div id="card-footer">
       <div class="d-flex justify-content-between align-items-center" >
-        <div class="btn-orange">
-          <%= link_to "Book product", product %>
+        <div>
+          <%= link_to "Book", product, {:class => "btn-orange"} %>
         </div>
         <h3> <%= product.price %> €</h3>
       </div>
+    </div>
   </div>
 
 </div>
