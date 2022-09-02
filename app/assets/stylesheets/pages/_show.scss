@@ -24,7 +24,7 @@
 
 
 #cat-border {
-  border: 1px solid orange;
+  border: 1px solid $orange;
   display: inline-block;
   padding: 5px 5px 5px 5px;
   border-radius: 15px;
@@ -46,4 +46,8 @@
 
 .button-container {
   margin-top: 20px;
+}
+
+p {
+  font-size: 18px;
 }
