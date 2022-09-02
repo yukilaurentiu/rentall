@@ -9,17 +9,18 @@
     <div  >
       <h3 class="spacing"> <%= @product.title %> </h3>
       <p id="cat-border"><%= @product.category %> </p>
-      <h4 class="spacing"> <%= @product.description %> </h4>
-      <h3 class="spacing"> <%= @product.price %> € </h3>
-      <h4 class="spacing"> <i class="fa-solid fa-house"></i> <%= @product.address %> </h4>
-      <div class="booking-btn" class="product-text">
+      <p class="spacing"> <%= @product.description %> </p>
+      <p class="spacing"> <%= @product.price %> € </p>
+      <p class="spacing"> <i class="fa-solid fa-house"></i> <%= @product.address %> </p>
+      <div class="booking-btn mt-5" class="product-text">
         <%= link_to "Book now!", new_product_booking_path(@product.id), class: "btn-orange" %>
       </div>
     </div>
   </div>
-  <div class="button-container">
-    <%= link_to "Update product", edit_product_path(@product), :class => "btn-orange" %>
-    <%= link_to "Delete", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, :class => "btn-orange-outline" %>
-    <%= link_to "Back to Products", products_path, :class => "btn-orange" %>
+  <hr>
+  <div class="button-container mt-5 d-flex justify-content-end">
+    <%= link_to "Update product", edit_product_path(@product), class: "btn-grey" %>
+    <%= link_to "Delete", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-grey-outline ms-2" %>
+    <%= link_to "Back to Products", products_path, class: "btn-orange-outline ms-2" %>
   </div>
 </div>
