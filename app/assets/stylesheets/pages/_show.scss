@@ -1,35 +1,45 @@
-
 .product-text {
   text-align: center;
   padding: 50px;
-}
-
-.booking-btn {
-  text-align: center;
-
-}
-
-// .description {
-//   float:left;
-// }
-
-.spacing {
+ }
+ .booking-btn {
+  text-align: right;
+  margin-bottom: 20px;
+ }
+ // .description {
+ //  float:left;
+ // }
+ .spacing {
   margin: 30px;
-}
+ }
 
-.title{
+ .title{
   font-weight: bold;
-}
+ }
 
-
-#cat-border {
-  border: 1px solid $orange;
+ #cat-border {
+  border: 1px solid orange;
   display: inline-block;
   padding: 5px 5px 5px 5px;
   border-radius: 15px;
   text-decoration: none;
   transition: background 70ms ease-in-out;
-}
+ }
+
+ .showcard {
+  font-family: sans-serif;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  // width: 300px;
+  // height: 480px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  &img-fluid {
+   display: block;
+  }
+ }
+ .button-container {
+  margin-top: 20px;
+ }
 
 p {
   font-size: 18px;
