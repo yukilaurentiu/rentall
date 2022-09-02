@@ -15,9 +15,9 @@ require "open-uri"
 15.times do
 
   product = Product.new(
-    title: Faker::Commerce.product_name + " " + Faker::Commerce.product_name,
-    description: Faker::Commerce.material + " " + Faker::Commerce.material,
-    category: Faker::Commerce.department(max: 5),
+    title: Faker::Commerce.product_name,
+    description: Faker::Commerce.material,
+    category: Faker::Commerce.department(max: 2),
     price: Faker::Commerce.price,
     address: Faker::Address.full_address
   )
