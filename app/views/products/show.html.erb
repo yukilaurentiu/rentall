@@ -1,28 +1,26 @@
 <div class="container">
   <p style="color: green"><%= notice %></p>
 </div>
-<div class="container">
-  <div class="showcard">
-    <div class="d-flex align-items-center">
-      <div>
-        <img class="card-img-top" width="200px" src="https://loremflickr.com/320/240/<%= @product.category %>" alt="Card image cap">
-      </div>
-      <div  >
-        <h3 class="spacing"> <%= @product.title %> </h3>
-        <p class="spacing" id="cat-border"><%= @product.category %> </p>
-        <h4 class="spacing"> <%= @product.description %> </h4>
-        <h3 class="spacing"> <%= @product.price %> € </h3>
-        <h4 class="spacing"> <i class="fa-solid fa-house"></i> <%= @product.address %> </h4>
-        <div class="booking-btn" class="product-text">
-          <%= link_to "Book now!", new_product_booking_path(@product.id), class: "btn-orange" %>
-        </div>
+<div class="container"  >
+  <div class="d-flex">
+    <div>
+      <img class="card-img-top" src="https://loremflickr.com/320/240/<%=@product.category%>" alt="Card image cap">
+    </div>
+    <div  >
+      <h3 class="spacing"> <%= @product.title %> </h3>
+      <p id="cat-border"><%= @product.category %> </p>
+      <p class="spacing"> <%= @product.description %> </p>
+      <p class="spacing"> <%= @product.price %> € </p>
+      <p class="spacing"> <i class="fa-solid fa-house"></i> <%= @product.address %> </p>
+      <div class="booking-btn mt-5" class="product-text">
+        <%= link_to "Book now!", new_product_booking_path(@product.id), class: "btn-orange" %>
       </div>
     </div>
   </div>
+  <hr>
   <div class="button-container mt-5 d-flex justify-content-end">
     <%= link_to "Update product", edit_product_path(@product), class: "btn-grey" %>
     <%= link_to "Delete", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-grey-outline ms-2" %>
     <%= link_to "Back to Products", products_path, class: "btn-orange-outline ms-2" %>
   </div>
 </div>
-
