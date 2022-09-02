@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    sql_query = "title ILIKE @@ :query OR description ILIKE @@ :query"
+    sql_query = "title ILIKE @@ :query OR description ILIKE @@ :query OR address ILIKE @@ :query"
     if params[:query].present?
       @products = Product.where("title ILIKE ?", "%#{params[:query]}%")
     else
@@ -12,7 +12,8 @@ class ProductsController < ApplicationController
     @markers = @products.geocoded.map do |product|
       {
         lat: product.latitude,
-        lng: product.longitude
+        lng: product.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {product: product})
       }
     end
   end
