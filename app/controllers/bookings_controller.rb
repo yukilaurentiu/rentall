@@ -17,7 +17,6 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @product = Product.find(params[:product_id])
     @bookings = Booking.all
   end
 
@@ -28,5 +27,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:comment, :start_date, :end_date)
   end
-
 end
