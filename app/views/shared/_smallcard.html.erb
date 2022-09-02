@@ -2,9 +2,9 @@
   <img src="https://loremflickr.com/320/240/<%=product.category%>" />
   <div class="card-product-infos" class="d-flex justify-content-between">
     <h2> <%= product.title %> </h2>
-    <h5> <%= product.description %> </h5>
-    <div class="btn-orange">
-      <%= link_to "Show Product", product %>
+    <p> <%= product.description %> </p>
+    <div>
+      <%= link_to "Show Product", product, {:class => "btn-orange"}%>
     </div>
   </div>
 </div>

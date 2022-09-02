@@ -16,8 +16,7 @@
 
   </div>
 
+<%= link_to "Update product", edit_product_path(@product), :class => "btn-orange" %>
+<%= link_to "Delete", product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, :class => "btn-orange-outline" %>
+<%= link_to "Back to Products", products_path %>
 
-  <%# <%= link_to "Update product", edit_product_path(@product) %>
-  <%# <%= link_to "Delete this product",product_path(@product), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <%= link_to "Back to Products", products_path %>
-</div>

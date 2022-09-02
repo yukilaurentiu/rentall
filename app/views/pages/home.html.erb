@@ -1,3 +1,4 @@
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path("banner.jpeg") %>);">
   <div class="container">
     <div id="banner">
@@ -7,7 +8,7 @@
   </div>
   <div class="d-flex justify-content-center"> <%# Removed class mx %>
     <div class="btn-orange">
-      <%= link_to "Show all products", products_path %>  <%# need to be fixed in css with own ID %>
+      <%= link_to "Show all products", products_path, {:class => "btn-orange"} %> <%# need to be fixed in css with own ID %>
     </div>
   </div>
 </div>
@@ -15,13 +16,10 @@
   <%= render "shared/search" %>
   <div >
     <h3 class="subtitle">Recomended products</h3>
-    <%# <div class="d-flex justify-content-center"> %>
       <div class="card-grid">
         <% @products.first(8).each do |product| %>
           <%= render(partial: "shared/card", locals: { product: product }) %>
         <% end %>
       </div>
-    <%# </div> %>
   </div>
-  <div class="d-flex justify-content-center" class=" margin-bottom-1">
 </div>
