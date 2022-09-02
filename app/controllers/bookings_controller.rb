@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
   end
 
   def index
+    @product = Product.find(params[:product_id])
     @bookings = Booking.all
   end
 
