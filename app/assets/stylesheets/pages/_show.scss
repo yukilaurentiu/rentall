@@ -31,22 +31,6 @@
   transition: background 70ms ease-in-out;
 }
 
-.showcard {
-  font-family: sans-serif;
-  margin: 10px 10px 10px 10px;
-  border-radius: 10px;
-  // width: 300px;
-  // height: 480px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  &img-fluid {
-    display: block;
-  }
-}
-
-.button-container {
-  margin-top: 20px;
-}
-
 p {
   font-size: 18px;
 }
