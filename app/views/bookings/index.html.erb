@@ -1,15 +1,16 @@
-<h1>My bookings</h1>
-<div class="container mx-auto">
-  <% current_user.bookings.each do |booking| %>
-    <div class="card-product">
-      <div class="card-product-infos">
-        <h2><%= booking.product.title%></h2>
-        <% days = booking.end_date - booking.start_date %>
-        <p> Days: <%= days.to_i %> </p>
-        <p> Total: <%= days.to_i * booking.product.price %> €</p>
-        <p><%= booking.comment %></p>
-        <p>from: <%= booking.start_date %> to: <%= booking.end_date %></p>
+<div class="container booking-wrapper">
+  <h1>My bookings</h1>
+  <div class="container mx-auto">
+    <% current_user.bookings.each do |booking| %>
+      <div class="card-booking">
+        <div class="card-booking-infos">
+          <h2 class="mt-4"><%= booking.product.title%></h2>
+          <% days = booking.end_date - booking.start_date %>
+          <p>from: <%= booking.start_date %> to: <%= booking.end_date %></p>
+          <p> Total: <%= days.to_i * booking.product.price %> €</p>
+          <p class="mb-4 comment-text"><%= booking.comment %></p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
