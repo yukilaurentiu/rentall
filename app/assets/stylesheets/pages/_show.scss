@@ -5,13 +5,13 @@
 }
 
 .booking-btn {
-  margin-top: 150px;
-  float: right;
+  text-align: center;
+
 }
 
-.description {
-  float:left;
-}
+// .description {
+//   float:left;
+// }
 
 .spacing {
   margin: 30px;
@@ -19,4 +19,14 @@
 
 .title{
   font-weight: bold;
+}
+
+
+#cat-border {
+  border: 1px solid orange;
+  display: inline-block;
+  padding: 5px 5px 5px 5px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background 70ms ease-in-out;
 }

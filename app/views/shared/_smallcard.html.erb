@@ -1,10 +1,12 @@
+<%= link_to product_path(product), style: "text-decoration: none;" do %>
+
 <div class="card-product">
   <img src="https://loremflickr.com/320/240/<%=product.category%>" />
   <div class="card-product-infos" class="d-flex justify-content-between">
-    <h2> <%= product.title %> </h2>
-    <p> <%= product.description %> </p>
-    <div>
-      <%= link_to "Show Product", product, {:class => "btn-orange"}%>
-    </div>
+    <h1> <%= product.title %> </h1>
+    <h2><%= product.category %> </h2>
+    <h2><i class="fa-solid fa-euro-sign"></i><%= product.price %></h2>
   </div>
 </div>
+
+<% end %>
