@@ -41,3 +41,44 @@
 .card-product .card-product-infos {
   padding: 16px;
 }
+
+// Styles for booking cards (index page for bookings)
+
+.booking-wrapper h1 {
+  color: $orange;
+}
+
+.card-booking {
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  height: 150px;
+  width: 50%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+}
+
+.card-booking h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-booking p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-booking .comment-text {
+  font-style: italic;
+}
+
+.card-booking .card-booking-infos {
+  padding: 12px;
+}
