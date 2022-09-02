@@ -12,13 +12,13 @@ Product.destroy_all
 
 require "open-uri"
 
-5.times do
+50.times do
   product = Product.new(
     title: Faker::Commerce.product_name + " " + Faker::Commerce.product_name,
     description: Faker::Commerce.material + " " + Faker::Commerce.material,
     category: Faker::Commerce.department(max: 5),
     price: Faker::Commerce.price,
-    address: Faker::Address.full_address
+    address: Faker::Address.country
   )
   file = URI.open('https://source.unsplash.com/random/800x800/?img=1')
   product.photo.attach(io: file, filename: 'random.png', content_type: 'image/png')
