@@ -1,35 +1,71 @@
 .btn-orange {
   color: white;
   padding: 8px 24px;
-  border: 1px solid #F5924D;
+  border: 1px solid $orange;
   border-radius: 8px;
-  background: #F5924D;
+  background-color: $orange;
   font-weight: 600;
   text-decoration: none;
   transition: background 70ms ease-in-out;
 
   &:hover {
-    background-color: #fd8f3b;
-    border: 1px solid #fd8f3b;
+    background-color: $orange-bright;
+    border: 1px solid $orange-bright;
     color: white;
     text-decoration: none;
   }
 }
 
 .btn-orange-outline {
-  color: #F5924D;
+  color: $orange;
   padding: 8px 24px;
-  border: 1px solid #F5924D;
+  border: 1px solid $orange;
   border-radius: 8px;
-  background: white;
+  background-color: transparent;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s ease;
 
   &:hover {
-    background-color: white;
-    border: 1px solid #fd8f3b;
-    color: #fd8f3b;
+    background-color: transparent;
+    border: 1px solid $orange-bright;
+    color: $orange-bright;
+    text-decoration: none;
+  }
+}
+
+.btn-grey {
+  color: white;
+  padding: 8px 24px;
+  border: 1px solid $warm-gray;
+  border-radius: 8px;
+  background-color: $warm-gray;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 70ms ease-in-out;
+
+  &:hover {
+    background-color: $dark-gray;
+    border: 1px solid $dark-gray;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.btn-grey-outline {
+  color: $dark-gray;
+  padding: 8px 24px;
+  border: 1px solid $dark-gray;
+  border-radius: 8px;
+  background-color: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid $warm-gray;
+    color: $warm-gray;
     text-decoration: none;
   }
 }
